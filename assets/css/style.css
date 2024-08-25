@@ -34,7 +34,7 @@ body {
 }
 
 .instagram-phone .phone {
-  background-image: url("/assets/img/home-phones.png");
+  background-image: url("assets/img/home-phones.png");
   width: 432px;
   height: 634.15px;
 }
