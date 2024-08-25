@@ -1,0 +1,235 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-size: 0.87rem;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 1);
+  display: flex;
+  flex-direction: column;
+  margin: 30px auto;
+}
+/*Container principal*/
+.instagram-wrapper {
+  width: 70%;
+  height: 100vh;
+  margin: auto;
+  display: grid;
+  grid-template-areas: "m f";
+  justify-content: center;
+  align-content: center;
+  gap: 1rem;
+}
+.instagram-phone {
+  grid-area: m;
+  min-width: 420px;
+  min-height: 615px;
+}
+
+.instagram-phone .phone {
+  background-image: url("/assets/img/home-phones.png");
+  width: 432px;
+  height: 634.15px;
+}
+
+.instagram-phone img {
+  position: relative;
+  top: 27.5px;
+  left: 156px;
+  width: 250px;
+  height: 538.84px;
+}
+
+/*Lado direito formulario */
+.instagram-continue {
+  grid-area: f;
+  min-width: 350px;
+  min-height: 615px;
+  padding: 10px;
+}
+.form_login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  width: 100%;
+  padding: 1.3rem;
+  border: 1px solid rgb(219, 219, 219);
+  margin-bottom: 10px;
+}
+.form_login img {
+  width: 175px;
+  height: 51px;
+  margin-top: 30px;
+  background-size: auto;
+  background-repeat: no-repeat;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.profile_photo img {
+  display: flex;
+  align-self: center;
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  border: 1px solid rgb(239, 239, 239);
+  margin: 8px auto 16px;
+  object-fit: cover;
+}
+.btn_login {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  place-items: center;
+  margin: 20px auto 10px;
+}
+.btn_login button {
+  border: none;
+  background-color: rgb(0, 149, 246);
+  border-radius: 8px;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+  padding: 8px 16px;
+  letter-spacing: 0.85px;
+  cursor: pointer;
+}
+.btn_login button:hover {
+  background-color: rgb(24, 119, 242);
+}
+.btn_login a {
+  letter-spacing: 0.85px;
+  text-align: center;
+  color: rgb(0, 149, 246);
+  font-weight: 700;
+  padding: 12px 0;
+  cursor: pointer;
+}
+.btn_login a:hover {
+  color: rgb(0, 55, 107);
+}
+/*Container trocar de conta ou cadastrar uma */
+.criar_conta {
+  padding: 30px 0;
+  width: 100%;
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(219, 219, 219);
+  margin-bottom: 10px;
+}
+.criar_conta p {
+  font-size: 1rem;
+  color: rgb(160, 160, 160);
+  margin-bottom: 4px;
+}
+.criar_conta a {
+  font-size: 1rem;
+  color: rgb(0, 149, 246);
+  font-weight: 600;
+}
+.criar_conta a:hover {
+  color: rgb(0, 55, 107);
+}
+.criar_conta span {
+  font-size: 1rem;
+  color: rgb(160, 160, 160);
+}
+/*Botões pra Download*/
+.download {
+  display: flex;
+  flex-direction: row;
+  column-gap: 10px;
+  margin: 10px 0;
+  align-items: center;
+  justify-content: center;
+}
+.app_download p {
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: center;
+  padding: 10px 20px;
+}
+
+.download img {
+  height: 40px;
+  text-align: center;
+}
+/* Rodape com links de informações*/
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  text-align: center;
+  margin: auto;
+  padding: 10px;
+}
+.footer .links_footer {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 15px 0 20px;
+}
+
+.footer .links_footer a {
+  padding: 8px;
+  color: rgb(115, 115, 115);
+  font-size: 0.85rem;
+  font-weight: 400;
+}
+.footer span {
+  color: rgb(115, 115, 115);
+  font-weight: 400;
+  font-size: 0.85rem;
+  padding: 0 10px;
+}
+
+@media screen and (max-width: 870px) {
+  .instagram-phone {
+    display: none;
+  }
+
+  .instagram-wrapper {
+    grid-area: f;
+    justify-content: center;
+    align-items: center;
+    column-gap: 15px;
+  }
+  .instagram-continue {
+    width: 80%;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .instagram-wrapper {
+    width: 100%;
+    column-gap: 3px;
+    padding-top: 5px;
+  }
+  .form_login,
+  .criar_conta {
+    width: 100%;
+    border: none;
+  }
+
+  .criar_conta {
+    padding: 15px 0;
+  }
+  .footer .links_footer a {
+    line-height: 2;
+  }
+  .footer {
+    padding: 0 0 40px;
+  }
+}
